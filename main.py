@@ -3,6 +3,8 @@ import keyboard as keyboard
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
+from BMIL_task1_keyboard_handwriting.UI.Application import Application
+
 
 def main_func():
     # Use a breakpoint in the code line below to debug your script.
@@ -123,6 +125,10 @@ class KeyEvent:
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    main_func()
+    #main_func()
+    app = Application()
+    app.exec()
+
+
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
