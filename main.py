@@ -4,6 +4,7 @@ import keyboard as keyboard
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 from BMIL_task1_keyboard_handwriting.UI.Application import Application
+from BMIL_task1_keyboard_handwriting.CI.Application import Application as ConsoleApplication
 
 
 def main_func():
@@ -119,15 +120,27 @@ class KeyEvent:
 
 
 
+def gui_application():
+    app = Application()
+    app.exec()
+
+
+CURRENT_PASSWORD = ""
+CONSOLE_MESSAGE_CHANGE_ACTION = "Change action:\n" \
+                                "\n1) Input new password"
+
+def console_application():
+    app = ConsoleApplication()
+    app.start()
 
 
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
+    console_application()
     #main_func()
-    app = Application()
-    app.exec()
+
 
 
 
