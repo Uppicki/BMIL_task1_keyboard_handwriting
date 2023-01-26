@@ -125,10 +125,6 @@ def gui_application():
     app.exec()
 
 
-CURRENT_PASSWORD = ""
-CONSOLE_MESSAGE_CHANGE_ACTION = "Change action:\n" \
-                                "\n1) Input new password"
-
 def console_application():
     app = ConsoleApplication()
     app.start()

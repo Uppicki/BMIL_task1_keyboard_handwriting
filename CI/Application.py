@@ -1,3 +1,4 @@
+from BMIL_task1_keyboard_handwriting.Logic.Password import Password
 
 SYMBOLS_DICT = ('qwertyuiop'
                 'asdfghjkl'
@@ -18,7 +19,8 @@ class Application:
     def __init__(self):
         print("Console application was created")
 
-        self.password = ''
+        self.password = Password('')
+        self.password_text = ''
 
 
 
@@ -28,13 +30,13 @@ class Application:
 
         while change >= 0:
             try:
-                print(CONSOLE_MESSAGE_CURRENT_PASSWORD("password") +
+                print(CONSOLE_MESSAGE_CURRENT_PASSWORD(self.password_text) +
                         CONSOLE_MESSAGE_START_MENU)
 
                 change = int(input("Input your change: "))
 
                 if change == 1:
-                    print("ok")
+                    self.input_password()
                 elif change == 2:
                     print("ok")
                 elif change == 3:
@@ -48,9 +50,17 @@ class Application:
 
 
     def input_password(self):
-        print(CONSOLE_MESSAGE_CURRENT_PASSWORD(self.password))
+        print(CONSOLE_MESSAGE_CURRENT_PASSWORD(self.password_text))
 
-        password = input("\nInput new password")
+        password_text = input("\nInput new password")
+
+        password = Password(password_text)
+
+        if password.is_valid:
+            self.password = password
+            self.password_text = password_text
+
+
 
 
 
