@@ -12,6 +12,7 @@ CONSOLE_MESSAGE_START_MENU = f"\nChange action:\n"\
                               f"2) New experience\n"\
                               f"3) Old experiences\n"
 CONSOLE_MESSAGE_INPUT_ERROR = f"\nYou should input int number (1 .. 3)"
+CONSOLE_MASSAGE_TRY_PASSWORD = f"\nTry password: "
 
 
 class Application:
@@ -21,6 +22,8 @@ class Application:
 
         self.password = Password('')
         self.password_text = ''
+
+
 
 
 
@@ -48,7 +51,6 @@ class Application:
             except:
                 print(CONSOLE_MESSAGE_INPUT_ERROR)
 
-
     def input_password(self):
         print(CONSOLE_MESSAGE_CURRENT_PASSWORD(self.password_text))
 
@@ -59,6 +61,15 @@ class Application:
         if password.is_valid:
             self.password = password
             self.password_text = password_text
+
+    def run_experience(self):
+        print(CONSOLE_MESSAGE_CURRENT_PASSWORD(self.password_text) +
+              CONSOLE_MASSAGE_TRY_PASSWORD)
+
+
+
+        return
+
 
 
 

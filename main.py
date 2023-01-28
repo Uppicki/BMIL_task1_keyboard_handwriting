@@ -3,7 +3,7 @@ import keyboard as keyboard
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
-from BMIL_task1_keyboard_handwriting.UI.Application import Application
+#from BMIL_task1_keyboard_handwriting.UI.Application import Application
 from BMIL_task1_keyboard_handwriting.CI.Application import Application as ConsoleApplication
 
 
@@ -120,9 +120,9 @@ class KeyEvent:
 
 
 
-def gui_application():
+'''def gui_application():
     app = Application()
-    app.exec()
+    app.exec()'''
 
 
 def console_application():
