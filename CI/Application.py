@@ -1,3 +1,4 @@
+from BMIL_task1_keyboard_handwriting.Logic.ExperienceManager import ExperienceManager
 from BMIL_task1_keyboard_handwriting.Logic.Password import Password
 
 SYMBOLS_DICT = ('qwertyuiop'
@@ -41,7 +42,7 @@ class Application:
                 if change == 1:
                     self.input_password()
                 elif change == 2:
-                    print("ok")
+                    self.run_experience()
                 elif change == 3:
                     print("ok")
                 else:
@@ -66,7 +67,7 @@ class Application:
         print(CONSOLE_MESSAGE_CURRENT_PASSWORD(self.password_text) +
               CONSOLE_MASSAGE_TRY_PASSWORD)
 
-
+        ExperienceManager().do_experience()
 
         return
 
